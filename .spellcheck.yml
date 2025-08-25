@@ -4,7 +4,7 @@ matrix:
     sources:
       - "**/*.txt"
       - "**/*.md"
-  - dictionaries:
-    - en_US
-    - personal: .spellcheck_ignore.txt
+    dictionaries:
+      - en_US
+      - personal: ".spellcheck_ignore.txt"
 
