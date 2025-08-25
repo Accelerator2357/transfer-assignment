@@ -1,7 +1,10 @@
 spellchecker: aspell
 matrix:
+  dictionaries:
+    - en_US
+    - personal: .spellcheck_ignore.txt
   - name: Text Files
     sources:
       - "**/*.txt"
       - "**/*.md"
-    extra_args: ["--personal=.aspell.en.pws"]
+
