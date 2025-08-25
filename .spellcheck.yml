@@ -6,5 +6,6 @@ matrix:
       - "**/*.md"
     ignores:
       - code
+      - pre
     ignore:
       - init
