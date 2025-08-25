@@ -3,5 +3,7 @@ matrix:
   - name: Text Files
     sources:
       - "**/*.txt"
-      - "strengths_and_weaknesses.md"
-      - "story.md"
+      - "**/*.md"
+    dictionary:
+      wordlists:
+      - .wordlist.txt
