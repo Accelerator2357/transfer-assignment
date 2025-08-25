@@ -1,28 +1,29 @@
 name: Spellcheck Action
 
-# When should this action be run?
-on: push
+on:
+  push:
 
 jobs:
-  build:
-    # Name of this job
+  spellcheck:
     name: Spellcheck
-    # Which container / platform to run on?
     runs-on: ubuntu-latest
-    # The different steps in this job
+    
+    # Define the matrix at the job level
+    strategy:
+      matrix:
+        include:
+          - name: "Text Files"
+            sources: "**/*.txt,**/*.md"
+            dictionaries: "en_US"
+
     steps:
-    # These can either be direct commands or use existing actions
-    # https://github.com/actions/checkout/tree/v3/
-    - uses: actions/checkout@v3
-    # https://github.com/rojopolis/spellcheck-github-actions/tree/v0/
-    - uses: rojopolis/spellcheck-github-actions@v0
-      name: Spellcheck
-      with: 
-        ignore: init
-        matrix: 
-          - name: Text Files
-            sources: 
-              - "**/*.txt"
-              - "**/*.md"
-            dictionaries:
-              - en_US
+      - uses: actions/checkout@v3
+
+      - name: "Run Spellcheck on ${{ matrix.name }}"
+        uses: rojopolis/spellcheck-github-actions@v0
+        with:
+          # The ignore parameter is defined here as it is a parameter of the action
+          ignore: init
+          # The action now uses the variables defined in the matrix
+          sources: ${{ matrix.sources }}
+          dictionaries: ${{ matrix.dictionaries }}
