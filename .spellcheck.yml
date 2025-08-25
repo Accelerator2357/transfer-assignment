@@ -4,3 +4,5 @@ matrix:
   sources:
   - "**/*.txt"
   - "**/*.md"
+  exclude:
+  - "strengths-and-weaknesses.md"
