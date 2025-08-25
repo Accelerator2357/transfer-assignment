@@ -1,10 +1,7 @@
 spellchecker: aspell
 matrix:
   - name: Text Files
-    # Only include all .md except the one you want ignored
     sources:
       - "**/*.txt"
       - "**/*.md"
-    # Use 'files' regex to explicitly include everything except your file
-    files: "^(?!how-to-use-git\\.md$).*\\.md$|.*\\.txt$"
-
+    extra_args: ["--personal=.aspell.en.pws"]
