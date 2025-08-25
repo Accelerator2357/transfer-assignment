@@ -3,9 +3,4 @@ matrix:
   - name: Text Files
     sources:
       - "**/*.txt"
-      - "**/*.md"
-    ignores:
-      - code
-      - pre
-    ignore:
-      - init
+      - "strengths_and_weaknesses.md"
