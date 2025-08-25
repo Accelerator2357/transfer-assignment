@@ -10,4 +10,3 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - uses: rojopolis/spellcheck-github-actions@v0
-        run: aspell --mode=markdown --lang=en --personal=.aspell.en.pws list < strengths_and_weaknesses.md
