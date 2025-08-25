@@ -7,23 +7,6 @@ jobs:
   spellcheck:
     name: Spellcheck
     runs-on: ubuntu-latest
-    
-    # Define the matrix at the job level
-    strategy:
-      matrix:
-        include:
-          - name: "Text Files"
-            sources: "**/*.txt,**/*.md"
-            dictionaries: "en_US"
-
     steps:
-      - uses: actions/checkout@v3
-
-      - name: "Run Spellcheck on ${{ matrix.name }}"
-        uses: rojopolis/spellcheck-github-actions@v0
-        with:
-          # The ignore parameter is defined here as it is a parameter of the action
-          ignore: init
-          # The action now uses the variables defined in the matrix
-          sources: ${{ matrix.sources }}
-          dictionaries: ${{ matrix.dictionaries }}
+      - uses: actions/checkout@v4
+      - uses: rojopolis/spellcheck-github-actions@v0

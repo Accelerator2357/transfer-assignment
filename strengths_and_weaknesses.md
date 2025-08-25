@@ -3,4 +3,4 @@ Branching and merging
 Performance
 ## Weaknesses
 Cannot handle binary files efficiently
-Learning Git is for beginners difficulty 
+Learning git is for beginners difficulty 
