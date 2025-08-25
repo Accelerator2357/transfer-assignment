@@ -4,3 +4,4 @@ matrix:
     sources:
       - "**/*.txt"
       - "strengths_and_weaknesses.md"
+      - "story.md"
