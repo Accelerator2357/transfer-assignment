@@ -5,4 +5,4 @@ matrix:
       - "**/*.txt"
       - "**/*.md"
     exclude:
-      - "how-to-use-git.md"
+      - "**/how-to-use-git.md"
