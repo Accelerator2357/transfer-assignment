@@ -2,6 +2,7 @@ spellchecker: aspell
 matrix:
   - name: Text Files
     sources:
-      - "!how-to-use-git.md"
       - "**/*.txt"
       - "**/*.md"
+    exclude: ^how-to-use-git\.md$
+
