@@ -1,10 +1,10 @@
 spellchecker: aspell
 matrix:
-  dictionaries:
-    - en_US
-    - personal: .spellcheck_ignore.txt
   - name: Text Files
     sources:
       - "**/*.txt"
       - "**/*.md"
+  - dictionaries:
+    - en_US
+    - personal: .spellcheck_ignore.txt
 
