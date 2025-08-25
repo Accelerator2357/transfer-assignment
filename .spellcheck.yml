@@ -4,5 +4,7 @@ matrix:
     sources:
       - "**/*.txt"
       - "**/*.md"
-    exclude:
-      - "**/how-to-use-git.md"
+    ignores:
+      - code
+    ignore:
+      - init
